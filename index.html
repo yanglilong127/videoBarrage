@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>视频弹幕</title>
+<style type="text/css">
+	*{margin:0 auto; padding:0}
+	#box{ width:800px; height:600px;  position:relative; margin-bottom:100px; position:relative}
+	#video{width:800px; height:600px}
+	#zimu{ position:absolute; width:800px; height:340px;  top:130px; left:0; overflow:hidden}
+	#zimu p{ position:absolute; left:800px; width:800px; font-weight:bold}
+	.but{ position:absolute; left:10px; top:90px; width:50px; height:50px; border-radius:25px}
+	#discuss{ position:fixed; background:rgba(0,0,0,0.8); width:100%; bottom:0; height:80px}
+	#discuss_box{ width:600px; height:50px; margin-top:15px}
+	#discuss_box input#text{ width:500px; height:50px; outline:none; border:none; border-radius:5px 0 0 10px; float:left; text-indent:10px}
+	#discuss_box input#submit{ width:100px; height:50px; outline:none; border:none; float:left; border-radius:0 5px 5px 0;
+							background:#CC00FF; font-size:24px; font-weight:bold; color:#FFFFFF; font-family:"微软雅黑"; cursor:pointer}
+</style>
+</head>
+
+<body>
+	<div id="box">
+    	<video id="video" src="long.mp4"  wmode="transparent" autoplay loop="-1"></video>
+        <div id="zimu">
+        	<!--<p>我日啊！</p>-->
+        </div>
+        <button class="but">全屏</button>
+    </div>
+    <div id="discuss">
+    	<div id="discuss_box">
+        	<input id="text" type="text" placeholder="评论内容">
+            <input id="submit" type="button"  value="发表">
+        </div>
+    </div>
+<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="js/danmu.js"></script>
+</body>
+</html>
